@@ -15,6 +15,18 @@ export class LoginComponent {
   email: string ='';
   pass: string ='';
 
+
+   showPassword:boolean =false;
+  showConfirmPassword:boolean=false;
+
+  togglePasswordVisibility(): void {
+   this.showPassword = !this.showPassword;
+ }
+  toggleConfirmPasswordVisibility(): void {
+   this. showConfirmPassword = !this. showConfirmPassword;
+ }
+  
+
 onsubmit() {
   // Retrieve the users array from local storage
   const storedUsers = localStorage.getItem('users');

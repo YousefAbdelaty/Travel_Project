@@ -1,46 +1,90 @@
-<div class="row mt-5 mb-5">
-
+<div class="row mt-5">
 
     <form (ngSubmit)="onsubmit()">
 
-        <div class="col-4 login-wrap " id="form-content">
+        <div class="col-4 login-wrap mb-5" id="form-content">
 
-            <h2 class="email-wrap mb-5 " id="form-head">Log in</h2>
 
-            <div class="ms-5 me-5">
-                <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
 
-                <input type="email" class="form-control mb-3 " id="exampleFormControlInput1" name="email" required
-                    [(ngModel)]="email" ngModel>
+            <div class="form-wrapper">
 
-                <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Password</label>
+                <h2 class="email-wrap mb-5 " id="form-head">ًWelcome back</h2>
+
+                <div class=" ms-5 me-5 mt-5">
+
+                    <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
+
+                    <input type="email" class="form-control mb-2 " id="exampleFormControlInput1" name="email"
+                        [(ngModel)]="email" required>
+
+                    <div class="col-auto">
+
+
+                        <label for="inputPassword6" class="col-form-label">Password</label>
+
+                    </div>
+                    <div class="col-auto password-wrap showpassword ">
+                        <i (click)="togglePasswordVisibility()" class="fa-solid fa-eye"></i>
+
+                        <input [type]="showPassword ? 'text' : 'password'" id="inputPassword6" class="form-control"
+                            aria-describedby="passwordHelpInline" name="password" [(ngModel)]="pass" required>
+
+                    </div>
+
+                    <div class="forgot-remember-wrapper">
+
+
+
+                        <div class="terms">
+                            <input type="checkbox">
+                            <p>Remember me</p>
+                        </div>
+                        <div>
+
+                            <button>Forgot password ?</button>
+
+                        </div>
+
+                    </div>
+                    <div class="col-auto mb-4"></div>
+
+                    <div class="col-auto mt-5">
+
+                        <button class="btn btn-success p-2 mb-4 login-btn" type="submit">Login</button>
+
+                    </div>
+
+
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="socialMedia">
+                        <button class="google">
+                            <i class="fa-brands fa-google" style="color: #ffffff;"></i>
+                            oogle
+                        </button>
+
+                        <button>
+                            <i class="fa-brands fa-square-facebook" style="color:white;"></i>
+                            acebook
+                        </button>
+
+                    </div>
+
+                    <div class="col-auto mb-5 mt-5 signup-btn-wrapper">
+                        <p>Don't have an account ? </p>
+
+                        <button class="btn" id="switch-btn" (click)="showSignup()">Sign up</button>
+
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <input type="password" id="inputPassword6" class="form-control"
-                        aria-describedby="passwordHelpInline" name="password" required [(ngModel)]="pass">
 
-                </div>
+            </div>
 
-                <div class="col-auto mb-4">
-                    <span id="passwordHelpInline" class="form-text span-class">
-                        Must be 8-20 characters long.
-                    </span>
-                </div>
-                <div class="col-auto">
+            <div>
+                <img src="/assets/imgs/6bd46eef-117b-41ba-98a8-eb7e8f8334d4.png" alt="">
 
-                    <button class="btn btn-success p-2 mb-4 login-btn mt-2" type="submit">Login</button>
-
-                </div>
-
-                <div class="col-auto mb-5 mt-2 signup-btn-wrapper">
-
-                    <p id="switch-p">Don't have an account ? </p>
-
-                    <button class="btn" id="switch-btn" (click)="showSignup()">Sign up</button>
-
-
-                </div>
             </div>
         </div>
 
