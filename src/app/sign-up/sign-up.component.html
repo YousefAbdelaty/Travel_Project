@@ -1,0 +1,58 @@
+<div class="row mt-5">
+
+    <form (ngSubmit)="onsubmit()">
+
+        <div class="col-4 login-wrap mb-5" id="form-content">
+
+            <h2 class="email-wrap mb-5" id="form-head">Sign up</h2>
+
+            <div class=" ms-5 me-5">
+
+                <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
+
+                <input type="email" class="form-control mb-2 " id="exampleFormControlInput1" name="email"
+                    [(ngModel)]="email">
+
+                <div class="col-auto">
+
+                    <label for="inputPassword6" class="col-form-label">Password</label>
+
+                </div>
+                <div class="col-auto">
+
+                    <input type="password" id="inputPassword6" class="form-control"
+                        aria-describedby="passwordHelpInline" name="password" [(ngModel)]="pass">
+
+                </div>
+                <div class="col-auto mt-2">
+
+                    <label for="inputPassword6" class="col-form-label">Confirm Password</label>
+
+                </div>
+                <div class="col-auto">
+
+                    <input type="password" id="inputPassword66" class="form-control"
+                        aria-describedby="passwordHelpInline" [(ngModel)]="confirm_pass" name="ConfirmPassword">
+
+                </div>
+
+                <div class="col-auto mb-4"></div>
+
+                <div class="col-auto">
+
+                    <button class="btn btn-success p-2 mb-4 login-btn" type="submit">Sign Up</button>
+
+                </div>
+
+                <div class="col-auto mb-5 mt-2 signup-btn-wrapper">
+                    <p id="switch-p">Already have an account ? </p>
+
+                    <button class="btn" id="switch-btn" (click)="showLogin()">Log in</button>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,129 @@
+
+.email-wrap{
+    margin-top: 30%;
+    width: 100%;
+}
+
+.login-wrap h2{
+    display: flex;
+    justify-content: center;
+}
+
+.login-wrap{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+    margin: 0 auto;
+
+}
+
+.login-wrap .login-btn{
+    width: 100%;
+}
+
+.login-wrap .signup-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrap .signup-btn-wrapper button{
+    margin-top: -1rem;
+    color: #28a745;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: 1rem;
+    
+}
+
+.login-wrap .signup-btn-wrapper button:hover{
+    color: white;
+    background-color: #198754;
+    transition: all 0.6s;
+}
+
+
+
+/* Media queries */
+
+
+@media only screen and (max-width:1200px){
+    .login-wrap .signup-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+    .login-wrap{
+        width: 27rem;
+
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:992px){
+    .login-wrap{
+        width: 25rem;
+       
+    }
+  
+}
+
+
+
+@media only screen and (max-width:768px){
+
+    .login-wrap{
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+      .login-wrap .signup-btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    
+    .login-wrap .signup-btn-wrapper button{
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.01rem;
+    }
+
+    
+    .login-wrap input {
+        height: 28px;
+    }
+}
+
+
+@media only screen and (max-width:576px){
+
+     .login-wrap{
+        width: 18rem; 
+        
+    }
+    .login-wrap label {
+        font-size: 14px;
+    }
+
+     .login-wrap .signup-btn-wrapper p{
+        font-size: 14px;
+     }
+    .login-wrap input {
+        height: 28px;
+    }
+    
+    
+}
