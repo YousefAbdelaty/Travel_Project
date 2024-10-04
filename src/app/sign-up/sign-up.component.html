@@ -4,53 +4,93 @@
 
         <div class="col-4 login-wrap mb-5" id="form-content">
 
-            <h2 class="email-wrap mb-5" id="form-head">Sign up</h2>
+            <div>
+                <img src="/assets/imgs/6bd46eef-117b-41ba-98a8-eb7e8f8334d4.png" alt="">
 
-            <div class=" ms-5 me-5">
-
-                <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
-
-                <input type="email" class="form-control mb-2 " id="exampleFormControlInput1" name="email"
-                    [(ngModel)]="email">
-
-                <div class="col-auto">
-
-                    <label for="inputPassword6" class="col-form-label">Password</label>
-
-                </div>
-                <div class="col-auto">
-
-                    <input type="password" id="inputPassword6" class="form-control"
-                        aria-describedby="passwordHelpInline" name="password" [(ngModel)]="pass">
-
-                </div>
-                <div class="col-auto mt-2">
-
-                    <label for="inputPassword6" class="col-form-label">Confirm Password</label>
-
-                </div>
-                <div class="col-auto">
-
-                    <input type="password" id="inputPassword66" class="form-control"
-                        aria-describedby="passwordHelpInline" [(ngModel)]="confirm_pass" name="ConfirmPassword">
-
-                </div>
-
-                <div class="col-auto mb-4"></div>
-
-                <div class="col-auto">
-
-                    <button class="btn btn-success p-2 mb-4 login-btn" type="submit">Sign Up</button>
-
-                </div>
-
-                <div class="col-auto mb-5 mt-2 signup-btn-wrapper">
-                    <p id="switch-p">Already have an account ? </p>
-
-                    <button class="btn" id="switch-btn" (click)="showLogin()">Log in</button>
-                </div>
             </div>
 
+            <div class="form-wrapper">
+
+                <h2 class="email-wrap mb-5 " id="form-head">Create an account</h2>
+
+                <div class=" ms-5 me-5 mt-5">
+
+                    <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
+
+                    <input type="email" class="form-control mb-2 " id="exampleFormControlInput1" name="email"
+                        [(ngModel)]="email">
+
+                    <div class="col-auto">
+
+
+                        <label for="inputPassword6" class="col-form-label">Password</label>
+
+                    </div>
+                    <div class="col-auto password-wrap showpassword ">
+                        <i (click)="togglePasswordVisibility()" class="fa-solid fa-eye"></i>
+
+                        <input [type]="showPassword ? 'text' : 'password'" id="inputPassword6" class="form-control"
+                            aria-describedby="passwordHelpInline" name="password" [(ngModel)]="pass">
+
+                    </div>
+                    <div class="col-auto mt-2">
+
+                        <label for="inputPassword6" class="col-form-label">Confirm Password</label>
+
+                    </div>
+                    <div class="col-auto password-wrap showpassword">
+                        <i (click)="toggleConfirmPasswordVisibility()" class="fa-solid fa-eye "></i>
+
+                        <input [type]=" showConfirmPassword? 'text' : 'password'" id="inputPassword66"
+                            class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="confirm_pass"
+                            name="ConfirmPassword">
+
+                    </div>
+
+                    <div class="terms">
+                        <input type="checkbox">
+                        <p>I agree to all Terms and Conditions</p>
+                    </div>
+
+                    <div class="col-auto mb-4"></div>
+
+                    <div class="col-auto mt-5">
+
+                        <button class="btn btn-success p-2 mb-4 login-btn" type="submit">Create account</button>
+
+                    </div>
+
+                    <!-- <div class="or-login">
+                        <p class="sharta">______________</p>
+                        <p class="or-word">OR</p>
+                        <p class="sharta">______________</p>
+                    </div> -->
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="socialMedia">
+                        <button class="google">
+                            <i class="fa-brands fa-google" style="color: #ffffff;"></i>
+                            oogle
+                        </button>
+
+                        <button>
+                            <i class="fa-brands fa-square-facebook" style="color:white;"></i>
+                            acebook
+                        </button>
+
+                    </div>
+
+                    <div class="col-auto mb-5 mt-5 signup-btn-wrapper">
+                        <p>Already have an account ? </p>
+
+                        <button class="btn" id="switch-btn" (click)="showLogin()">Log in</button>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </form>

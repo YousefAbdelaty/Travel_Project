@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-sign-up',
   standalone: true,
@@ -10,6 +11,17 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './sign-up.component.css'
 })
 export class SignUpComponent {
+
+  showPassword:boolean =false;
+  showConfirmPassword:boolean=false;
+
+  togglePasswordVisibility(): void {
+   this.showPassword = !this.showPassword;
+ }
+  toggleConfirmPasswordVisibility(): void {
+   this. showConfirmPassword = !this. showConfirmPassword;
+ }
+  
 
   email: string ='';
   pass: string ='';
