@@ -158,6 +158,15 @@ body{
     padding:10px 45px ;
 }
 
+.error-email p{
+    color: red;
+}
+
+input::placeholder{
+    color: white;
+    opacity: 20%;
+}
+
 
 
 
@@ -260,8 +269,15 @@ body{
     .login-wrap .form-wrapper .divider{
         margin: 0;
     }
+    .login-wrap .form-wrapper .terms{
 
-   
+        margin-bottom: -10px;
+    }
+
+   .login-wrap .form-wrapper .terms label{
+
+        font-size: 13px;
+   }
     
   
 }

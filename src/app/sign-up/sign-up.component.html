@@ -1,6 +1,6 @@
 <div class="row mt-5">
 
-    <form (ngSubmit)="onsubmit()">
+    <form (ngSubmit)="onsubmit()" [formGroup]="userform">
 
         <div class="col-4 login-wrap mb-5" id="form-content">
 
@@ -18,7 +18,14 @@
                     <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
 
                     <input type="email" class="form-control mb-2 " id="exampleFormControlInput1" name="email"
-                        [(ngModel)]="email" required>
+                        formControlName="email" required>
+
+                    <!-- <div *ngIf="submitted && userform.controls['email'].invalid&&userform.controls['email'].touched"
+                        class="error-email">
+                        <p>
+                            Please enter a valid email
+                        </p>
+                    </div> -->
 
                     <div class="col-auto">
 
@@ -30,8 +37,16 @@
                         <i (click)="togglePasswordVisibility()" class="fa-solid fa-eye"></i>
 
                         <input [type]="showPassword ? 'text' : 'password'" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline" name="password" [(ngModel)]="pass" required>
+                            aria-describedby="passwordHelpInline" name="password" formControlName="password" required
+                            placeholder="Must be 8-20 characters long.">
 
+
+                        <!-- <div *ngIf="submitted && userform.controls['password'].invalid&&userform.controls['password'].touched"
+                            class="error-email">
+                            <p>
+                                Please enter a valid password
+                            </p>
+                        </div> -->
                     </div>
                     <div class="col-auto mt-2">
 
@@ -42,29 +57,39 @@
                         <i (click)="toggleConfirmPasswordVisibility()" class="fa-solid fa-eye "></i>
 
                         <input [type]=" showConfirmPassword? 'text' : 'password'" id="inputPassword66"
-                            class="form-control" aria-describedby="passwordHelpInline" [(ngModel)]="confirm_pass"
+                            class="form-control" aria-describedby="passwordHelpInline" formControlName="confirm_pass"
                             name="ConfirmPassword" required>
+
+                        <!-- <div *ngIf="submitted && userform.controls['confirm_pass'].invalid&&userform.controls['confirm_pass'].touched"
+                            class="error-email">
+                            <p>
+                                Please enter a valid password
+                            </p>
+                        </div> -->
+
+                        <!-- <div *ngIf=" submitted && userform.controls['confirm_pass'].value != userform.controls['password'].value"
+                            class="error-email">
+                            <p>
+                                Passwords not match
+                            </p>
+                        </div> -->
 
                     </div>
 
-                    <div class="terms">
-                        <input type="checkbox">
-                        <p>I agree to all Terms and Conditions</p>
+                    <div class="terms mt-4">
+                        <input type="checkbox" id="check">
+                        <label for="check">I agree to all Terms and Conditions</label>
                     </div>
 
                     <div class="col-auto mb-4"></div>
 
-                    <div class="col-auto mt-5">
+                    <div class="col-auto ">
 
-                        <button class="btn btn-success p-2 mb-4 login-btn" type="submit">Create account</button>
+                        <button class="btn btn-success p-2 mb-4 login-btn mt-1" type="submit">Create account</button>
 
                     </div>
 
-                    <!-- <div class="or-login">
-                        <p class="sharta">______________</p>
-                        <p class="or-word">OR</p>
-                        <p class="sharta">______________</p>
-                    </div> -->
+
                     <div class="divider">
                         <span>or</span>
                     </div>

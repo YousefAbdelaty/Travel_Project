@@ -1,6 +1,6 @@
 <div class="row mt-5">
 
-    <form (ngSubmit)="onsubmit()">
+    <form (ngSubmit)="onsubmit()" [formGroup]="userform">
 
         <div class="col-4 login-wrap mb-5" id="form-content">
 
@@ -15,7 +15,7 @@
                     <label for="exampleFormControlInput1" class="form-label  ">Email address</label>
 
                     <input type="email" class="form-control mb-2 " id="exampleFormControlInput1" name="email"
-                        [(ngModel)]="email" required>
+                        formControlName="email" required>
 
                     <div class="col-auto">
 
@@ -27,19 +27,19 @@
                         <i (click)="togglePasswordVisibility()" class="fa-solid fa-eye"></i>
 
                         <input [type]="showPassword ? 'text' : 'password'" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline" name="password" [(ngModel)]="pass" required>
+                            aria-describedby="passwordHelpInline" name="password" formControlName="password" required>
 
                     </div>
 
-                    <div class="forgot-remember-wrapper">
+                    <div class="forgot-remember-wrapper  mt-1">
 
 
 
-                        <div class="terms">
-                            <input type="checkbox">
-                            <p>Remember me</p>
+                        <div class="terms mb-1">
+                            <input id="Remember" type="checkbox">
+                            <label for="Remember">Remember me</label>
                         </div>
-                        <div>
+                        <div class="mb-1">
 
                             <button>Forgot password ?</button>
 

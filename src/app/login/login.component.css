@@ -172,6 +172,10 @@ body{
     gap: 67px;
 }
 
+.login-wrap .form-wrapper .forgot-remember-wrapper label,button{
+    font-size: 15px;
+}
+
 
 
 
@@ -225,13 +229,13 @@ body{
         font-size: 12px;
     }
     
-    .login-wrap .form-wrapper .forgot-remember-wrapper button{
-        font-size: 12px;
-    }
-    
     .login-wrap .form-wrapper .forgot-remember-wrapper{
         gap: 40px;
     }   
+
+    .login-wrap .form-wrapper .forgot-remember-wrapper label,button{
+    font-size: 12px;
+}
   
 }
 
@@ -301,13 +305,15 @@ body{
         font-size: 11px;
     }
     
-    .login-wrap .form-wrapper .forgot-remember-wrapper button{
-        font-size: 11px;
-    }
+   
     
     .login-wrap .form-wrapper .forgot-remember-wrapper{
         gap: 44px;
     }  
+
+     .login-wrap .form-wrapper .forgot-remember-wrapper label,button{
+    font-size: 11px;
+    }
    
     
   
@@ -340,6 +346,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 0.01rem;
+    font-size: 14px;
     }
 
     
@@ -440,6 +447,9 @@ body{
     }
     .login-wrap .form-wrapper .forgot-remember-wrapper{
         gap: 20px;
+    }
+     .login-wrap .form-wrapper .forgot-remember-wrapper label,button{
+        font-size: 10px;
     }
     
     
